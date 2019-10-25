@@ -1,13 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Resolve  } from '@angular/router';
 
+interface INews {
+  title: string;
+  publishedAt: string;
+  description: string;
+  urlToImage: string;
+  content: string;
+  author: string;
+  url: string;
+}
+
 @Component({
   selector: 'app-article-view',
   templateUrl: './article-view.component.html',
   styleUrls: ['./article-view.component.scss']
 })
 export class ArticleViewComponent implements OnInit {
-  newsInformation = {
+  newsInformation: INews = {
     title: '',
     publishedAt: '',
     description: '',
