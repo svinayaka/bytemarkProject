@@ -8,7 +8,7 @@
     height: 97.6%;
 }
 
-.listView__title {
+.listView__items {
     border: 1px solid;
     min-height: 20px;
     background: $backgroundColor;
@@ -16,7 +16,7 @@
     padding: 1%;
 }
 
-.listView__title:hover {
+.listView__items:hover {
     transition: $transitionSeconds;
     background: $hover;
 }
