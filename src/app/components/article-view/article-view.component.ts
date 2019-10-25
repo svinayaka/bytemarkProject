@@ -7,7 +7,15 @@ import { ActivatedRoute, Router, Resolve  } from '@angular/router';
   styleUrls: ['./article-view.component.scss']
 })
 export class ArticleViewComponent implements OnInit {
-  newsInformation = {};
+  newsInformation = {
+    title: '',
+    publishedAt: '',
+    description: '',
+    urlToImage: '',
+    content: '',
+    author: '',
+    url: ''
+  };
   constructor(private actRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
