@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { ListViewComponent } from './components/list-view/list-view.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 import { LayoutresolverService } from './layout/layoutresolver.service';
+import { SelectionComponent } from './components/selection/selection.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { LayoutresolverService } from './layout/layoutresolver.service';
     LayoutComponent,
     ArticleViewComponent,
     ListViewComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    SelectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [LayoutresolverService],
   bootstrap: [AppComponent]

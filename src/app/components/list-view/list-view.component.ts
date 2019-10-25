@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { LayoutresolverService } from '../../layout/layoutresolver.service';
 
 
 @Component({
@@ -9,12 +9,15 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./list-view.component.scss']
 })
 export class ListViewComponent implements OnInit {
-  listView = [];
-  constructor(private actRouter: ActivatedRoute, private route: Router) { }
+  listView: Array<any> = [];
+  constructor(private actRouter: ActivatedRoute, private route: Router, private service: LayoutresolverService) { }
   ngOnInit() {
     if (this.actRouter.snapshot.data && this.actRouter.snapshot.data.resolveList.articles) {
       this.listView = this.actRouter.snapshot.data.resolveList.articles;
     }
+    this.service.list$.subscribe((resp: Array<any>) => {
+      this.listView = resp;
+    });
   }
 
   redirectToArticle(selected) {

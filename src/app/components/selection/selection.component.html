@@ -1,0 +1,3 @@
+<select [ngModel]="selected" #item (ngModelChange)="modelChanged(item.value)">
+    <option *ngFor="let eachlist of listItems" [ngValue]="eachlist">{{eachlist.text}}</option>
+</select>

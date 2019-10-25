@@ -14,9 +14,9 @@ export class HeaderService {
     return new HttpHeaders(head);
   }
   constructor(private http: HttpClient) { }
-  get(url) {
-    // const header = this.createAuthorizationHeader();
-    // return this.http.get(url, { headers: header });
-    return this.http.get(url);
+  get(url, params) {
+    if (params) {
+      return this.http.get(url, { params });
+    }
   }
 }

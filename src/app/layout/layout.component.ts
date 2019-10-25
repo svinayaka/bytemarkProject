@@ -10,12 +10,21 @@ import { LayoutresolverService } from './layoutresolver.service';
 })
 export class LayoutComponent implements OnInit {
   public IndianNews = [];
+  public serverError = '';
   constructor(private newsService: LayoutresolverService) { }
   ngOnInit() {
     this.newsService.fetchNews()
-    .subscribe((resp: {articles: []}) => {
-      this.IndianNews = resp.articles;
-    });
+    .subscribe(
+      this.onSuccess.bind(this),
+      this.onError.bind(this)
+    );
+  }
+
+  onSuccess(resp) {
+    this.IndianNews = resp.articles;
+  }
+  onError(err) {
+    this.serverError = err.error.message;
   }
 
 }

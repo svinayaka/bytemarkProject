@@ -1,6 +1,14 @@
 <div class="main">
   <div>
     <h3>{{title}}</h3>
+    <div class="userPreference">
+      <div>
+        <app-selection (selectedEmitter)="selectedCountry($event)" [list]="country"></app-selection>
+      </div>
+      <div>
+        <app-selection (selectedEmitter)="selectedCategory($event)" [list]="category"></app-selection>
+      </div>   
+    </div>
   </div>
   <app-layout></app-layout>
 </div>
