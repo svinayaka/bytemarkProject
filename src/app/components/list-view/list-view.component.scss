@@ -8,12 +8,17 @@
     height: 97.6%;
 }
 
+.listViewTable {
+    width: 100%;
+}
+
 .listView__items {
     border: 1px solid;
     min-height: 20px;
     background: $backgroundColor;
     cursor: pointer;
     padding: 1%;
+    height: 3rem;
 }
 
 .listView__items:hover {
