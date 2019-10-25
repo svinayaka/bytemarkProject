@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'stylesvariables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0.2%;
+    border: 5px solid $border;
+    height: 100vh;
+    width: 100%;
+    font-family: monospace;
+}

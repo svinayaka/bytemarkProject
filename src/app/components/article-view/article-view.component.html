@@ -1,0 +1,28 @@
+<div class="newsContainer">
+    <div>
+        <button class="backBtn" (click)="backNavigator()">Back</button>
+    </div>
+    <div>
+        <div class="NewsHeadline">
+            <div>
+                <h3>{{newsInformation?.title}}</h3>
+            </div>
+            <div>
+                {{newsInformation?.publishedAt}}
+            </div>
+        </div>
+        <div class="NewsContent">
+            <div class="NewsContent__description">
+                <h3>{{newsInformation?.description}}</h3>
+            </div>
+            <div >
+                <img class="NewsContent__img" [src]="newsInformation?.urlToImage"/>
+                <p>{{newsInformation?.content}}</p>
+            </div>
+        </div>
+        <div class="NewsMoreInfo">
+            <span>{{newsInformation?.author}}</span>
+            <span><a [href]="newsInformation?.url" target="__blank">more info...</a></span>
+        </div>
+    </div>
+</div>
