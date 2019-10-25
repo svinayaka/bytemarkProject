@@ -23,6 +23,8 @@ git repo url https://github.com/svinayaka/bytemarkProject.git
 
 ## Development server
 
+Run `npm run start` for a dev server. Navigate to `http://localhost:8000/`. 
+or 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 
