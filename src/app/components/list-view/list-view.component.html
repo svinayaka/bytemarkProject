@@ -1,23 +1,23 @@
 <div>
-    <table class="listViewTable">
-        <thead>
+    <table class="listViewTable table">
+        <thead class="">
             <tr class="listView__items">
-                <th>TITLE</th>
-                <th>AUTHOR</th>
-                <th>PUBLISHED</th>
+                <th scope="col">TITLE</th>
+                <th class="hidden-xs-device hidden-sm-device">AUTHOR</th>
+                <th class="hidden-xs-device show-sm-device ">PUBLISHED</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="listView__items listView__title" *ngFor="let eachList of listView" (click)="redirectToArticle(eachList)">
+            <tr scope="row" class="listView__items listView__title" *ngFor="let eachList of listView" (click)="redirectToArticle(eachList)">
                 <th>{{eachList.title}}</th>
-                <th>{{eachList.author}}</th>
-                <th>{{eachList.publishedAt | date:'medium'}}</th>
+                <th class="hidden-xs-device hidden-sm-device">{{eachList.author}}</th>
+                <th class="hidden-xs-device show-sm-device">{{eachList.publishedAt | date:'medium'}}</th>
             </tr>
         </tbody>
     </table>
     <!-- <div class="listView" *ngFor="let eachList of listView" (click)="redirectToArticle(eachList)">
         <div class="listView__items listView__title" >{{eachList.title}}</div>
-        <div class="listView__items listView__author">{{eachList.author}}</div>
-        <div class="listView__items listView__date">{{eachList.publishedAt | date:'medium'}}</div>
+         <div class="listView__items listView__author">{{eachList.author}}</div>
+        <div class="listView__items listView__date">{{eachList.publishedAt | date:'medium'}}</div> 
     </div> -->
 </div>
