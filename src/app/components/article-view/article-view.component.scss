@@ -8,6 +8,18 @@
     background-color: $backgroundColor;
 }
 
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+    .newsContainer {
+        .NewsHeadline {
+            display: block;
+        }
+        .NewsContent__img {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+
 .newsContainer {
     height: 100%;
     overflow: auto;

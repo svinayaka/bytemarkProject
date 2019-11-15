@@ -13,13 +13,13 @@
         </div>
         <div class="NewsContent">
             <div>
-                <img class="NewsContent__img" [src]="newsInformation?.urlToImage"/>
+                <img class="NewsContent__img rounded" [src]="newsInformation?.urlToImage"/>
                 <p>{{newsInformation?.content}}</p>
             </div>
         </div>
         <div class="NewsMoreInfo">
             <span>{{newsInformation?.author}}</span>
-            <span><a [href]="newsInformation?.url" target="__blank">more info...</a></span>
+            <span><a  class="btn-link" [href]="newsInformation?.url" target="__blank">more info...</a></span>
         </div>
     </div>
 </div>

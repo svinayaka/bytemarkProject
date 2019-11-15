@@ -10,7 +10,7 @@ import { LayoutresolverService } from '../../layout/layoutresolver.service';
 })
 export class ListViewComponent implements OnInit {
   listView: Array<any> = [];
-  listViewToggle: string = 'single';
+  listViewToggle = 'single';
   constructor(private actRouter: ActivatedRoute, private route: Router, private service: LayoutresolverService) { }
   ngOnInit() {
     if (this.actRouter.snapshot.data && this.actRouter.snapshot.data.resolveList.articles) {

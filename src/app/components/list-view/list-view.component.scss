@@ -10,12 +10,12 @@
     height: 97.6%;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 600px) {
+@media only screen and (min-width: 400px) and (max-width: 650px) {
     .hidden-xs-device {
       display: none;
     }
 }
-@media only screen and (min-width: 601px) and (max-width: 800px) {
+@media only screen and (min-width: 651px) and (max-width: 800px) {
     .show-sm-device {
         display: block;
     }
